@@ -79,22 +79,21 @@
 ### 配置静态服务器的访问路径
 nginx可以给用户提供访问Web服务的功能，但是需要先配置正确的静态资源路径才能通过url访问到我们需要展示的静态html资源文档
 1. 查看并打开nginx的默认配置文件
-    ```bash
+```bash
     nginx -t            #测试配置文件是否正确
-    ```
+```
 文件路径
-    ```bash
+```bash
     nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
     nginx: configuration file /etc/nginx/nginx.conf test is successful
-    ```
+```
 
 修改配置文件
-    ```bash 
-
+```bash 
     cd /etc/nginx/      #转到相应的路径下 
     nano nginx.conf      #使用nano打开并进行修改，将路径修改为我们存放静态资源文件的路径，比如说改成/data/www 或者是别的相应的文件
-    ```
-    ```bash
+```
+```bash
     server {
         listen       80 default_server;
         listen       [::]:80 default_server;
@@ -110,6 +109,7 @@ nginx可以给用户提供访问Web服务的功能，但是需要先配置正确
         error_page 404 /404.html;
             location = /40x.html {
         }
+    }
     ```
 
 
