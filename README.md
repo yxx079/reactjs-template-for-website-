@@ -16,18 +16,21 @@
    ```bash
    git clone <项目的git仓库URL>
    cd 项目目录
+   ```
 3. 安装所有依赖
     ```bash
     npm install
+    ```
 4. 使用Vite运行项目：
     ```bash
     npm run dev
-
+    ```
 ## Vite构建指南
 
 在项目根目录下，运行以下命令来构建项目：
    ```bash
    npm run build
+   ```
 构建完成后，你会在dist目录下看到打包好的文件。你可以使用任何静态文件服务器来部署这些文件。
 
 ## 结束
